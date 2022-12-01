@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+  }
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 1% 25% 1% 25%;
+    background-color: rgb(43, 43, 43);
+
+}
+
+.container-list{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    background:rgba(43, 43, 43, 0);
+}

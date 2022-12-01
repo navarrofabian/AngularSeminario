@@ -1,0 +1,11 @@
+img{
+    height: 80px;
+}
+
+.sale {
+    border: 2px solid rgb(5, 163, 163);
+}
+
+td{
+   vertical-align: middle; 
+}

@@ -1,0 +1,10 @@
+<div class="cart">
+    <p>carrito de compras</p>
+
+    <ul>
+        <li *ngFor=" let product of (cartList$ | async)">
+            {{product.brand}} : {{product.quantity}}
+        </li>
+    </ul>
+</div>
+

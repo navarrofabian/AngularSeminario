@@ -1,0 +1,28 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Cantidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products" [ngClass]="{'sale': product.sale}" class="sale align-middle">
+            <td><img class=" img thumbnail " [src]="product.image" [alt]="product.model"></td>
+            <td>{{product.brand}}</td>
+            <td>{{product.model}}</td>
+            <td>{{product.price | currency}}</td>
+            <td *ngIf="product.stock == 0"><span class="badge text-bg-warning">SIN STOCK</span></td>
+            <td *ngIf="product.stock == 0"></td>
+            <td *ngIf="product.stock > 0">{{product.stock}}</td>
+            <td class="td-btn" *ngIf="product.stock > 0">
+                <app-input-integer [(quantity)]="product.quantity" [max]="product.stock"></app-input-integer>
+                
+            </td>
+            <td><button class="btn btn-primary" (click)="addToCart(product)">comprar</button></td>
+        </tr>
+    </tbody>
+</table>
