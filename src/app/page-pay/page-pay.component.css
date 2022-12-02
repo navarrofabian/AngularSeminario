@@ -1,0 +1,10 @@
+img{
+    max-width: 100px;
+}
+
+.tittle-pay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}

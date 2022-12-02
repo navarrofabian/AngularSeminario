@@ -1,10 +1,28 @@
 <div class="cart">
-    <p>carrito de compras</p>
-
-    <ul>
-        <li *ngFor=" let product of (cartList$ | async)">
-            {{product.brand}} : {{product.quantity}}
-        </li>
-    </ul>
+    <div class="cart-comp"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></div>
+    <table  class="table align-middle">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Marca</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Unidades</th>
+          </tr>
+        </thead>
+        <tbody>
+          <p  *ngIf="(cartList$ | async)?.length == 0"  class="cart-empty">no hay productos en el carrito</p>
+          <tr *ngFor=" let product of (cartList$ | async)">
+            <td><img class=" img thumbnail " [src]="product.image" [alt]="product.model"></td>
+            <td>{{product.brand}}</td>
+            <td>{{product.model}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div  *ngIf="(cartList$ | async)?.length != 0" class="cont-pay">
+        <button type="button" class="btn btn-success"><a class="item-nav" aria-current="page" [routerLink]="['/page-pay']">Finalizar Compra</a></button>
+      </div>
 </div>
 

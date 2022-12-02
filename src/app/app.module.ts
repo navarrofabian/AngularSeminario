@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { BitrexContactComponent } from './bitrex-contact/bitrex-contact.component';
 import { InputIntegerComponent } from './input-integer/input-integer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PagePayComponent } from './page-pay/page-pay.component';
 
 
 
@@ -20,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     BitrexProductsComponent,
     BitrexContactComponent,
     InputIntegerComponent,
+    PagePayComponent,
   ],
   imports: [
     BrowserModule,

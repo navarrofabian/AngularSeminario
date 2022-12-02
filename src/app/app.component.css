@@ -24,3 +24,13 @@ nav{
 button{
     background:rgba(43, 43, 43, 0);
 }
+footer{
+    background: rgb(44, 44, 44);
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+}
+
+footer p{
+    color: aliceblue;
+}

@@ -1,0 +1,24 @@
+
+img{
+    max-width: 60px;
+}
+.cont-pay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a{
+    color: aliceblue;
+}
+.cart-comp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.cart-empty{
+    position: absolute;
+    width: 250px;
+    padding: 1% 0% 1% 2%;
+}

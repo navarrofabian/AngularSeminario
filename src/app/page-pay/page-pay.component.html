@@ -1,0 +1,49 @@
+<div class="tittle-pay">
+    <p>Termina tu compra</p>
+</div>
+<table class="table align-middle">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Marca</th>
+        <th scope="col">Modelo</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Unidades</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor=" let product of (cartList$ | async)">
+        <td><img class=" img thumbnail " [src]="product.image" [alt]="product.model"></td>
+        <td>{{product.brand}}</td>
+        <td>{{product.model}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.quantity}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    
+  </div>
+
+  <div *ngIf="(cartList$ | async)?.length != 0">
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg></span>
+        <input type="text" class="form-control" placeholder="Numero de tarjeta" aria-label="Numero de tarjeta" aria-describedby="basic-addon1">
+      </div>
+      
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
+        <input type="text" class="form-control" placeholder="Nombre titular" aria-label="Nombre titular" aria-describedby="basic-addon1">
+      </div>
+      
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Fecha de Vencimiento" aria-label="Fecha de Vencimiento">
+        <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-up-right"><polyline points="15 14 20 9 15 4"></polyline><path d="M4 20v-7a4 4 0 0 1 4-4h12"></path></svg></span>
+        <input type="text" class="form-control" placeholder="Codigo" aria-label="Codigo">
+      </div>
+      
+      <div class="input-group">
+        <button type="button" class="btn btn-success">Confirmar Compra</button>
+      </div>
+  </div>
+  

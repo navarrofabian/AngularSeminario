@@ -15,7 +15,7 @@ export class ProductCartService {
 
   addToCart(product: Product) {
     let item: Product = this._cartList.find((v1) => v1.model === product.model)!;
-    if (!item) {
+    if (!item && product.quantity > 0){
     this._cartList.push({ ... product});
     
     }

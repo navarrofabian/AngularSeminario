@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule} from '@angular/router';
 import { BitrexContactComponent } from './bitrex-contact/bitrex-contact.component';
 import { BitrexProductsComponent } from './bitrex-products/bitrex-products.component';
+import { PagePayComponent } from './page-pay/page-pay.component';
 
 const routes: Routes = [
     {
@@ -16,6 +17,10 @@ const routes: Routes = [
     {
         path: 'contact',
         component: BitrexContactComponent
+    },
+    {
+        path: 'page-pay',
+        component: PagePayComponent
     },
 ];
 
